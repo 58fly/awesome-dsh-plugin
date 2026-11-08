@@ -118,9 +118,9 @@ export PONYTAIL_DEFAULT_MODE=ultra
 | --- | --- |
 | Node | `>=20` |
 | DSH | `>=0.2.0-rc.1 <0.3.0-0`。`engines.dsh` 是唯一的版本闸门：宿主看到它会直接跳过 peer 检查，装错宿主版本就是装不上，不会降级运行 |
-| 两个 peer | `@deepseek-ai/cordis ~4.1.0`、`@deepseek-ai/schemastery ~3.19.0`，由宿主提供，本包不安装也不打包 |
-| 运行时依赖 | **零**。不是洁癖：`dsh plugin add <本地目录>` 生成的是 `link:`，pnpm 不会安装插件的 `dependencies`，任何运行时 `import` 都会 `ERR_MODULE_NOT_FOUND`。所以六份技能都靠宿主自己的注册表读包内 `skills/`，本包不 `import` 任何东西 |
-| 前端注入 | 两个 `@deepseek-ai/dsh-client-ui-*` 模块，宿主没装就降级为「没有设置面板」，命令与配置照常可用 |
+| Peers | `@deepseek-ai/cordis ~4.1.0`、`@deepseek-ai/schemastery ~3.19.0`，由宿主提供，本包不安装也不打包 |
+| Deps | **零**。不是洁癖：`dsh plugin add <本地目录>` 生成的是 `link:`，pnpm 不会安装插件的 `dependencies`，任何运行时 `import` 都会 `ERR_MODULE_NOT_FOUND`。所以六份技能都靠宿主自己的注册表读包内 `skills/`，本包不 `import` 任何东西 |
+| Inject | 两个 `@deepseek-ai/dsh-client-ui-*` 模块，宿主没装就降级为「没有设置面板」，命令与配置照常可用 |
 
 <h2 align="center"><sub>TROUBLESHOOT</sub><br>排障</h2>
 
